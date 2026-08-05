@@ -21,4 +21,6 @@ reference every later decision is measured against.
 | [Strategic Objectives](Strategic-Objectives.md) | Which measurable outcomes justify the investment? |
 | [Design Principles](Design-Principles.md) | Which non-negotiable rules shape every design decision? |
 | [Personas](Personas.md) | Who consumes the platform and what do they need from it? |
+| [Platform Building Blocks](Building-Blocks.md) | Which parts make up the platform and who owns them? |
+| [Assumptions and Boundaries](Assumptions-and-Boundaries.md) | Which design assumptions does the rest of the concept rely on? |
 | [Roadmap Overview](Roadmap-Overview.md) | How does the vision become production value over time? |

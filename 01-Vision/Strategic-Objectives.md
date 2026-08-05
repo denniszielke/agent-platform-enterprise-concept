@@ -75,3 +75,25 @@ model (24).
 Objectives should be reviewed at every phase boundary. A capability that no longer
 serves an objective is a candidate for simplification, and an objective without a
 supporting capability is a gap in the [capability model]({{ site.baseurl }}/02-Enterprise-Capabilities/).
+
+## Success criteria for the vision
+
+The vision is successful when the platform is not perceived as extra governance
+overhead, but as the fastest and safest path to production. Project teams should
+experience it as an accelerator, control functions as a way to make evidence consistent
+and repeatable, and sponsors as a way to turn AI investment into visible outcomes.
+
+- There is a clear onboarding path for new AI projects, including which runtime,
+  identity, network, telemetry, model gateway and data access patterns are available.
+- The 24 committed capabilities are mapped to accountable platform owners, implementation
+  artefacts and decision points, so scope is operationally actionable and not only
+  documented.
+- Every reusable AI asset — models, MCP servers, tools, data products and agents — has
+  ownership, classification, lifecycle state, approved consumer scope and telemetry
+  expectations.
+- Model and tool consumption can be attributed to projects, teams, agents or workloads
+  with enough fidelity to support FinOps, optimisation and governance discussions.
+- Quality, safety and performance evaluation are integrated into the lifecycle rather
+  than treated as after-the-fact documentation.
+- The platform evolves as a product, with a roadmap, feedback loops, service catalogue,
+  enablement material and reusable templates.

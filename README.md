@@ -14,7 +14,7 @@ GitHub.
 
 | Section | Purpose |
 | --- | --- |
-| [`01-Vision/`](01-Vision/) | Vision, strategic objectives, design principles, personas, roadmap overview |
+| [`01-Vision/`](01-Vision/) | Vision, strategic objectives, design principles, personas, building blocks, assumptions, roadmap overview |
 | [`02-Enterprise-Capabilities/`](02-Enterprise-Capabilities/) | The 24 committed capabilities, catalog and maturity model |
 | [`03-Architecture-Concept/`](03-Architecture-Concept/) | Principles, shared services, control plane, hub and spoke, capability mapping |
 | [`03a-Centralized-Operating-Model/`](03a-Centralized-Operating-Model/) | Centralised operating model as a complete pattern |

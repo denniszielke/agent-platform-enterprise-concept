@@ -7,6 +7,16 @@ nav_order: 1
 
 # Vision for the agentic enterprise
 
+{: .highlight }
+> **Vision statement.** The Agent Platform will give the enterprise a governed, reusable
+> and resilient foundation for building and operating agents on Microsoft Cloud. It will
+> reduce the amount of foundational work each agent project team has to solve on its own,
+> while increasing the trust, observability, security and accountability with which
+> agents, agent-enabled applications, MCP servers, models, tools and data products are
+> created and operated. The goal is not to standardise every agent or solution. The goal
+> is to standardise the conditions under which many different agents and solutions can be
+> built safely, quickly and repeatedly.
+
 The Agent Platform should establish an open, scalable ecosystem in which business and
 technology teams can compose agents, models, tools, data products and enterprise
 services across multiple runtimes and delivery channels. Rather than prescribing a
@@ -47,6 +57,50 @@ without constraining innovation or creating a central delivery bottleneck.
 | Agents are isolated pilots | Agents are registered, discoverable and reusable |
 | Cost surfaces only in the monthly invoice | Unit economics are visible per scenario |
 | Compliance is proven manually per project | Evidence is produced by the platform automatically |
+
+## Why the agent platform matters
+
+Enterprises are moving from isolated AI experiments towards portfolios of agent-enabled
+products, services and processes that operate across business units, data platforms,
+user channels and enterprise systems. The challenge is no longer to build one good
+agent, but to create an operating environment in which many teams can deliver many
+solutions without repeatedly rediscovering the same security, identity, networking,
+model management, observability and governance patterns. As portfolios grow, the
+decisive scaling constraint becomes reusable enterprise context rather than the number
+of available models.
+
+Every agent needs trusted data and tools, shared business semantics, memory of tasks and
+history, governed actions, and decision logic for planning and approval. This context
+spans domain data, real-time events, documents, APIs, workflows, business processes and
+organisational ownership boundaries; it cannot be embedded reliably inside a model or
+reconstructed independently by every project. Without a shared enterprise contract across
+reusable composition, organisational projections and semantics, bespoke integration,
+local interpretation and limited reuse become the default.
+
+Fragmentation also weakens control. When each project makes local decisions about
+subscriptions, network access, model endpoints, secrets, tool connections, telemetry,
+cost attribution and lifecycle ownership, identity, security, governance, observability
+and compliance cannot consistently follow every interaction from source to context, agent
+and action. The enterprise then struggles to answer fundamental questions: who owns an
+agentic asset, what data it can reach, which identity and model it used, what it cost,
+how it was evaluated and what evidence exists for compliance.
+
+The Agent Platform addresses this by turning foundational work and enterprise context
+into shared, reusable and governed capabilities. It does not remove responsibility from
+project teams; it allows them to focus on domain-specific value by consuming prepared
+building blocks for infrastructure, composition, semantics, organisational scope and
+controls. The acceleration mechanism is therefore not simply faster infrastructure
+deployment, but the governed conversion of enterprise knowledge, data, tools and process
+understanding into agentic solutions that can be reused and scaled with confidence.
+
+## What the platform will enable
+
+| Outcome | What it means |
+| --- | --- |
+| Faster solution delivery | Standardised onboarding paths, patterns and templates so projects do not start from an empty cloud environment. Teams receive a minimum viable foundation for identity, network integration, runtime hosting, model access, telemetry and cost attribution before building solution-specific logic. |
+| Trusted AI execution | Identity, policy, auditability and lifecycle status are visible for users, applications, agents, MCP servers, models, data products and tools — the same governance discipline as other enterprise workloads, plus additional controls for agentic behaviour. |
+| Reusable enterprise capabilities | Models, tools, APIs, MCP servers, data products, semantic models and agents are discoverable and consumable as managed enterprise assets, so reuse becomes easier than rebuilding. |
+| Measurable business impact | Operating signals are captured from the beginning: usage, model consumption, token and execution patterns, cost allocation, quality, safety, performance, tool invocation, workflow state and security events. |
 
 ## What the platform is — and is not
 
