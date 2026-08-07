@@ -39,6 +39,14 @@ GitHub.
 
 ## Running the site locally
 
+Ruby 3.3 is required, matching the GitHub Pages workflow. macOS system Ruby 2.6
+is not supported. Install and activate Homebrew Ruby before running Bundler:
+
+```bash
+brew install ruby@3.3
+export PATH="$(brew --prefix ruby@3.3)/bin:$PATH"
+```
+
 ```bash
 bundle install
 bundle exec jekyll serve
