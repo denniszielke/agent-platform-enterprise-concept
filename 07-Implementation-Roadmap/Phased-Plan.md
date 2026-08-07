@@ -28,11 +28,12 @@ with owners; candidate scenarios with sponsors and success measures.
 
 **Purpose.** Remove the foundation work that would otherwise be repeated per project.
 
-*Activities:* deploy the landing zone (capabilities 2-5); stand up the model gateway (15)
-with quota, safety and metering; implement agent identity and delegation patterns (7);
-establish policy as code and pipeline gates (9, 10); wire correlated telemetry (22);
-publish the first golden path with a reference implementation; define the initial
-allocation model (23).
+*Activities:* establish financial ownership and the commercial baseline (1); deploy the
+landing zone (2-5); stand up one supported runtime (11) and the model gateway (15) with
+quota, safety and metering; implement agent identity and delegation patterns (7) and
+baseline runtime protection (8); establish policy as code and pipeline gates (9, 10);
+wire correlated telemetry (22); publish the first golden path with a named support and
+feedback route (24); define the initial allocation model (23).
 
 *Exit criteria:* a domain team can onboard self-service within the published time; all
 model traffic flows through the gateway; one correlated trace per interaction is visible;
@@ -46,14 +47,17 @@ policy violations fail a pipeline.
 
 **Purpose.** Remove doubt about whether the paved road works under real conditions.
 
-*Activities:* deliver two production scenarios end to end on golden paths; build
-evaluation datasets and release gates (18); integrate governed grounding data products
-(16, 17); implement channel integration patterns (14); establish memory retention rules
-(13); run the first operational readiness and security reviews; measure unit cost per
-scenario.
+*Activities:* deliver two production scenarios end to end on golden paths; implement
+explicit workflow state, retry and human-handoff patterns (12); build evaluation datasets
+and release gates (18); integrate governed grounding data products (16, 17); implement
+channel integration patterns (14); establish memory retention rules (13); run the first
+operational readiness and security reviews; measure unit cost per scenario; evaluate the
+centralised and federated operating models against observed demand, risk, central
+capacity, domain capability and control maturity.
 
 *Exit criteria:* two agents serving real users with evaluation gates in the pipeline,
-correlated telemetry, attributed cost, and a documented incident and rollback procedure.
+correlated telemetry, attributed cost, and a documented incident and rollback procedure;
+the operating model decision is recorded with rationale and accountable owners.
 
 ## Phase 3 — Scale (6-12 months)
 
@@ -61,12 +65,13 @@ correlated telemetry, attributed cost, and a documented incident and rollback pr
 
 *Activities:* operationalise the registry (20) as the source of truth; establish the tool
 broker and MCP connectivity standards (19); launch the marketplace (21); mature FinOps to
-chargeback or hybrid allocation (23); onboard additional domains; take the operating model
-decision or transition; harden resilience targets (6).
+chargeback or hybrid allocation (23); execute the selected operating model by scaling
+central delivery capacity or onboarding qualified domain teams; harden resilience targets
+(6).
 
 *Exit criteria:* components consumed outside their owning domain; onboarding time stable
-as domain count grows; unit cost trending down; operating model decision recorded with
-rationale.
+as demand grows; unit cost trending down; selected ownership and accountability model
+operating as recorded.
 
 ## Phase 4 — Operate (12+ months)
 
@@ -84,7 +89,7 @@ completion.
 | Phase | Capability focus | Gate question |
 | --- | --- | --- |
 | 0 Align | Baseline all 24 | Do we agree what success looks like? |
-| 1 Foundations | 2-5, 7, 9, 10, 15, 22 | Can a team build safely without central help? |
-| 2 First agents | 13, 14, 16, 17, 18, 23 | Does the paved road survive real users? |
+| 1 Foundations | 1-5, 7-11, 15, 22-24 | Can a team build safely without central help? |
+| 2 First agents | 12-14, 16-18, 23 | Does the paved road survive real users, and which operating model fits? |
 | 3 Scale | 6, 19, 20, 21, 23 | Are we reusing rather than repeating? |
 | 4 Operate | 8, 18, 22, 24 | Is the platform improving without a programme? |

@@ -19,7 +19,7 @@ criteria are in the [implementation roadmap]({{ site.baseurl }}/07-Implementatio
 | 0 — Align | Vision, scenarios, capability baseline | 0-1 month | Agreed scope and measurable objectives |
 | 1 — Foundations | Landing zone, identity, gateway, observability | 1-3 months | A governed environment agents can be built in |
 | 2 — First agents | Two production scenarios on golden paths | 3-6 months | Proven value and a validated paved road |
-| 3 — Scale | Registry, marketplace, FinOps, federation | 6-12 months | Reuse across domains and predictable economics |
+| 3 — Scale | Registry, marketplace, FinOps, selected operating model | 6-12 months | Reuse across domains and predictable economics |
 | 4 — Operate | Continuous evaluation and maturity growth | 12+ months | A durable, improving platform |
 
 ## Sequencing logic
@@ -40,12 +40,14 @@ Phases are ordered so that each one removes the largest remaining constraint:
 
 ## Operating model decision point
 
-The choice between the [centralised]({{ site.baseurl }}/03a-Centralized-Operating-Model/)
-and [federated]({{ site.baseurl }}/03b-Federated-Operating-Model/) model is normally made
-at the end of Phase 1 and revisited during Phase 3. Many enterprises deliberately start
-centralised to reach a compliant production scenario quickly, then federate as capability
-maturity and guardrail automation improve.
+The formal choice between the
+[centralised]({{ site.baseurl }}/03a-Centralized-Operating-Model/) and
+[federated]({{ site.baseurl }}/03b-Federated-Operating-Model/) operating models is made at
+the **end of Phase 2**. By then, two production scenarios have tested the platform under
+real conditions and provide evidence about demand, central capacity, domain capability,
+guardrail automation, risk and operational maturity.
 
-Signals that it is time to federate include a growing intake backlog, domains with the
-skills to operate their own agents, and guardrails that are automated rather than
-review-based.
+Both options remain viable. Choose the centralised model when consistent central delivery
+best fits demand, risk and available skills. Choose the federated model when mature domain
+teams can safely own delivery within centrally governed guardrails. Record the rationale
+and review it at later phase boundaries as those conditions change.

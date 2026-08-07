@@ -9,7 +9,7 @@ nav_order: 1
 
 The **Centralized Operating Model** places a single, dedicated platform team at the centre of all agent development and operations. That team builds the platform, defines the paved roads, and typically owns the full lifecycle — from provisioning AI runtimes and managing model access, through to deploying, monitoring, and retiring agents on behalf of every consuming business unit.
 
-This model is the natural starting point for organisations that are at an early stage of enterprise AI adoption, where the primary goals are establishing trust, enforcing consistent governance, and proving out the 24 platform capabilities before distributing ownership more broadly.
+This model is a viable choice where consistent governance, direct accountability and concentrated operational ownership best fit the organisation's risk profile, delivery demand and available skills. It can serve as either an initial model or a durable operating model when the central team has sufficient capacity.
 
 ![Centralised operating model]({{ site.baseurl }}/assets/diagrams/centralized-operating-model.svg)
 
@@ -58,7 +58,7 @@ Business units interact with this team through a formal intake process: they sub
 
 ---
 
-## When to Choose This Model
+## When This Model Fits
 
 Use the table below to evaluate whether the centralized model is right for your organisation's current context.
 
@@ -74,7 +74,9 @@ Use the table below to evaluate whether the centralized model is right for your 
 | Available central platform headcount | Small, focused team sufficient | Must scale guardrail automation as domain teams grow |
 
 {: .highlight }
-> The centralized model is the safest choice when your organisation is establishing governance foundations, operating in a tightly regulated sector, or when domain teams lack the platform engineering skills needed to operate AI infrastructure independently.
+> The centralized model is a strong fit when the organisation needs concentrated control,
+> operates in a tightly regulated context, or has enough central capacity to meet demand
+> without transferring operational ownership to domain teams.
 
 ---
 
@@ -101,12 +103,15 @@ Every architectural choice involves trade-offs. The centralized model offers str
 | **Scalability ceiling** | Central teams have finite capacity; agent demand grows faster than headcount | Define a migration strategy to the federated model before hitting ceiling |
 
 {: .warning }
-> Without explicit capacity planning and automation investment, the centralized model will eventually become a constraint on enterprise AI velocity. Plan your transition path to the [federated model](../03b-Federated-Operating-Model/Overview.md) early, even if you start centralized.
+> Without explicit capacity planning and automation investment, the centralized model can
+> become a constraint on enterprise AI velocity. Review its fit at phase boundaries; move
+> to the [federated model](../03b-Federated-Operating-Model/Overview.md) only when the
+> evidence supports changing ownership.
 
 ---
 
 ## Relationship to the Federated Model
 
-The centralized and federated models are not mutually exclusive endpoints — they represent positions on a maturity continuum. Most organisations begin centralized to establish foundations and then progressively federate as domain teams mature. The platform capabilities built under the centralized model (model gateway, identity, observability, governance tooling) become the **guardrails and golden paths** that enable safe federation later.
+The centralized and federated models are two viable ownership patterns on the same architecture. The formal choice is made at the end of Phase 2 using evidence from production scenarios. An organisation can retain centralised ownership as a durable model or later redistribute ownership if demand, domain capability and guardrail maturity justify it. The model gateway, identity, observability and governance capabilities remain stable in either case.
 
 See [Federated Operating Model — Overview](../03b-Federated-Operating-Model/Overview.md) for detail on the federated pattern and the decision factors that trigger a transition.

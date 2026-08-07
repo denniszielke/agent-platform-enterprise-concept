@@ -18,7 +18,7 @@ and detailed in the [architecture concept]({{ site.baseurl }}/03-Architecture-Co
 | Application Platform | Gives project teams a safe place to host AI applications, agents, MCP servers and integration components inside the enterprise network | Azure Kubernetes Service, Azure Container Apps, integration and messaging services, API Management, ingress patterns |
 | AI Platform | Abstracts raw model endpoints and provides stable, policy-controlled access to approved model capabilities | Foundry accounts and projects, model deployments, model capacity, model gateway integration, telemetry, evaluation artefacts |
 | Data Platform | Turns enterprise data into governed context that AI systems can safely retrieve, interpret and use | Microsoft Fabric, data products, streaming and storage services, semantic models, ontologies, vector and search indexes, data agents and MCP servers |
-| Agent Control Plane | Ensures agents are treated as managed enterprise entities rather than hidden project artefacts | Agent registry concepts, agent identities, metadata, lifecycle state, tool registries, MCP inventories, security and observability signals |
+| Agent Control Plane | Ensures agents are treated as managed enterprise entities rather than hidden project artefacts | Agent 365 registry concepts, agent identities, metadata, lifecycle state, tool registries, MCP inventories, security and observability signals |
 | Agent Project | The delivery boundary in which a team composes approved components into a real agent-enabled solution | Business outcome, user journey, agent behaviour, solution logic, evidence that the solution is safe, useful and measurable |
 
 ## What changes for agent project teams

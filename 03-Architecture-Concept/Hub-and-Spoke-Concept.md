@@ -2,7 +2,7 @@
 layout: default
 title: Hub and Spoke Concept
 parent: Architecture Concept
-nav_order: 7
+nav_order: 9
 ---
 
 # Hub and spoke concept

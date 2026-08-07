@@ -43,7 +43,8 @@ The 24 committed capabilities that define the scope and the value delivered.
 
 <div class="card" markdown="1">
 ### 3. Architecture choices
-Layered architecture, hub and spoke, and the centralised vs federated decision.
+Six building blocks, their service contracts, hub-and-spoke topology, and the path from
+centralised foundations to federated delivery.
 
 [Explore the architecture]({{ site.baseurl }}/03-Architecture-Concept/){: .btn }
 </div>
@@ -70,14 +71,18 @@ Five phases from alignment to continuous operation, with gates and metrics.
 | Interoperability | 19-21 | Tool and MCP connectivity, agent and MCP registry, enterprise capability marketplace |
 | Operations | 22-24 | Observability, AI FinOps, enterprise AI enablement operating model |
 
-## Two operating models, one architecture
+## Two viable operating models, one architecture
+
+The formal choice is made at the end of Phase 2, after the first production agents have
+tested the platform under real conditions. Both models remain viable and use the same
+capability model and architecture; they differ primarily in delivery ownership.
 
 <div class="card-grid" markdown="1">
 
 <div class="card" markdown="1">
 ### Centralised
-One platform team owns build and run. Maximum consistency and control; risk of becoming
-the delivery bottleneck.
+One platform team owns build and run. This maximises consistency and direct control but
+requires enough central capacity to meet enterprise demand.
 
 [Centralised operating model]({{ site.baseurl }}/03a-Centralized-Operating-Model/){: .btn }
 </div>
@@ -85,7 +90,7 @@ the delivery bottleneck.
 <div class="card" markdown="1">
 ### Federated
 The central team owns the paved road; domain teams build and operate their own agents.
-Fastest domain delivery; demands mature guardrails and telemetry.
+This enables parallel domain delivery and demands mature guardrails and telemetry.
 
 [Federated operating model]({{ site.baseurl }}/03b-Federated-Operating-Model/){: .btn }
 </div>
@@ -93,7 +98,7 @@ Fastest domain delivery; demands mature guardrails and telemetry.
 </div>
 
 {: .highlight }
-> The architecture barely changes between the two models — the ownership column does.
+> The architecture stays stable whichever model is selected; the ownership column changes.
 > See the [capability to architecture mapping]({{ site.baseurl }}/03-Architecture-Concept/Capability-to-Architecture-Mapping.html).
 
 ## How to use this material

@@ -9,7 +9,7 @@ nav_order: 1
 
 The **Federated Operating Model** distributes the building and operating of agents across multiple domain teams, while a central platform team retains ownership of the foundational capabilities, guardrails, and golden paths that keep the enterprise safe and consistent. Domain teams are empowered to move at their own velocity — designing, deploying, and evolving agents that reflect deep domain knowledge — within the boundaries defined and enforced by the central platform.
 
-The federated model represents an evolution beyond the [centralized model](../03a-Centralized-Operating-Model/Overview.md). It is not a replacement; it is what becomes possible once an organisation has established robust governance tooling, validated platform capabilities, and matured domain engineering teams to the point where they can operate AI workloads responsibly.
+The federated model is a viable alternative to the [centralized model](../03a-Centralized-Operating-Model/Overview.md) when an organisation has robust governance tooling, validated platform capabilities and domain engineering teams that can operate AI workloads responsibly. It is selected for its ownership and scaling characteristics, not because it is an inevitable maturity stage.
 
 ![Federated operating model]({{ site.baseurl }}/assets/diagrams/federated-operating-model.svg)
 
@@ -74,7 +74,7 @@ A cross-cutting **Enterprise AI Community of Practice** connects central and dom
 
 ---
 
-## When to Choose This Model
+## When This Model Fits
 
 | Decision Factor | Centralized | Federated |
 |---|---|---|
@@ -88,7 +88,9 @@ A cross-cutting **Enterprise AI Community of Practice** connects central and dom
 | Organisational culture | Central control preferred | Domain ownership and autonomy valued |
 
 {: .highlight }
-> The federated model pays dividends when domain teams have enough AI platform maturity to operate responsibly, and when the central team's delivery capacity has become a bottleneck to enterprise AI velocity. If neither condition is yet true, begin with the [centralized model](../03a-Centralized-Operating-Model/Overview.md).
+> The federated model pays dividends when domain teams can operate responsibly and parallel
+> delivery is valuable. Where those conditions are absent, the
+> [centralized model](../03a-Centralized-Operating-Model/Overview.md) remains the better fit.
 
 ---
 
@@ -122,4 +124,4 @@ A cross-cutting **Enterprise AI Community of Practice** connects central and dom
 
 The federated model extends rather than replaces the centralized foundations. The model gateway, identity infrastructure, governance tooling, and observability pipeline built under the [centralized model](../03a-Centralized-Operating-Model/Overview.md) become the shared services that federated domain teams depend on. The central platform team's role shifts from builder-and-operator of all agents to enabler, guardrail owner, and shared-service provider.
 
-Most organisations transition from centralized to federated gradually — beginning by federating the most mature domain team, validating the governance mechanisms, and then progressively extending autonomous rights to additional domains as their capability matures.
+Organisations that select the federated model at the end of Phase 2 should introduce it gradually: begin with the most mature domain team, validate the governance mechanisms, and extend autonomous rights only as each additional domain demonstrates readiness. Selecting federation does not make the centralized model obsolete for other enterprises or for scenarios retained under central ownership.

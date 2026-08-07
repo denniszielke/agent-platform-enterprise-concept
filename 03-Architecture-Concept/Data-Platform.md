@@ -1,15 +1,32 @@
 ---
 layout: default
-title: Data Platform Integration
+title: Data Platform
 parent: Architecture Concept
 nav_order: 5
 ---
 
-# Data platform integration
+# Data platform
 
 Agents are only as good as the enterprise knowledge they can reach — and only as safe as
-the controls that travel with it. This page describes how the agent platform integrates
-with the enterprise data estate rather than building a parallel one.
+the controls that travel with it. The Data Platform makes trusted data, semantic meaning,
+retrieval, session state and memory consumable through governed contracts rather than
+allowing every Agent Project to build unmanaged point-to-point access.
+
+In the Microsoft Cloud realisation, Microsoft Fabric provides the centre of gravity for
+governed data products, semantic models and analytical context. The agent platform
+consumes those assets through governed interfaces and can also use Azure data, streaming,
+search and storage services where the scenario requires them.
+
+## Service contract
+
+| Platform area | Reference implementation | Contract to Agent Projects |
+| --- | --- | --- |
+| Analytical data products | Fabric, OneLake and governed workspaces | Owned data product with classification, lineage, freshness and access policy |
+| Semantic foundation | Fabric semantic models, Purview glossary, ontologies and graph stores | Versioned business concepts, metrics and relationships with named owners |
+| Retrieval and vector services | Azure AI Search | Search endpoint, index contract, freshness target and authorization behavior |
+| Operational stores | Azure SQL, Cosmos DB, ADLS and approved databases | Data contract, transaction semantics and recovery commitment |
+| Session and memory | Redis, Cosmos DB, SQL or AI Search | Scoped store with purpose, retention class and deletion interface |
+| Data agents and data MCP | Fabric data agents or governed container-hosted MCP servers | Versioned tool schema, authorization scopes, output classification and SLO |
 
 ## Principle: consume data products, do not copy data
 
@@ -45,6 +62,21 @@ source must disappear from indexes, caches and agent memory within a defined win
 > Caches and agent memory are grounding stores too. Include them in retention, deletion
 > and access-review scope.
 
+## Session, workflow state and memory
+
+Projects classify state before selecting a store. Redis holds low-latency, replaceable
+session context with short expiry. Cosmos DB supports durable JSON state and elastic or
+multi-region scale. SQL is preferred when transactions, relational constraints and
+auditable workflow state dominate. AI Search holds derived semantic memory retrieved by
+meaning; it is not the authoritative business record.
+
+Durable Functions or Logic Apps own workflow progression, approvals, retries and
+compensating actions. Their state is not reconstructed from conversational memory. Raw
+conversation history is not automatically long-term memory: durable memory requires an
+approved purpose, identity scope, retention rule, inspection path and deletion behavior.
+Each datum has one authoritative store and one retention class even when a project uses
+several storage technologies.
+
 ## Quality signals
 
 Retrieval quality problems usually present as model problems. Instrument retrieval
@@ -54,7 +86,7 @@ same dashboards as latency and cost.
 
 ## Responsibilities
 
-| Responsibility | Data platform | Agent platform |
+| Responsibility | Data Platform | Agent Project |
 | --- | --- | --- |
 | Source ingestion and quality | Owns | Consumes |
 | Access control definition | Owns | Enforces at query time |

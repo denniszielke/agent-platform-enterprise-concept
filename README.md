@@ -16,7 +16,8 @@ GitHub.
 | --- | --- |
 | [`01-Vision/`](01-Vision/) | Vision, strategic objectives, design principles, personas, building blocks, assumptions, roadmap overview |
 | [`02-Enterprise-Capabilities/`](02-Enterprise-Capabilities/) | The 24 committed capabilities, catalog and maturity model |
-| [`03-Architecture-Concept/`](03-Architecture-Concept/) | Principles, shared services, control plane, hub and spoke, capability mapping |
+| [`03-Architecture-Concept/`](03-Architecture-Concept/) | Six building blocks, service contracts, lifecycle overlay, topology and capability mapping |
+| [`Enterprise Agent Platform Architecture Concept`](03-Architecture-Concept/Enterprise-Agent-Platform-Architecture-Concept.md) | Full architecture reference, functional scenarios, delivery lifecycle and production-readiness criteria |
 | [`03a-Centralized-Operating-Model/`](03a-Centralized-Operating-Model/) | Centralised operating model as a complete pattern |
 | [`03b-Federated-Operating-Model/`](03b-Federated-Operating-Model/) | Federated operating model as a complete pattern |
 | [`04-Cross-Cutting-Topics/`](04-Cross-Cutting-Topics/) | Identity, security, observability, cost, data and model governance, compliance |

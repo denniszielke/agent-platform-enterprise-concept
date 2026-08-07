@@ -11,78 +11,32 @@ These principles extend the [design principles]({{ site.baseurl }}/01-Vision/Des
 into concrete architectural constraints. Each one is stated as a rule, a rationale and an
 implication that a reviewer can test a design against.
 
-## Single governed entry point for model access
+## Canonical principles
 
-*Rule.* All model traffic flows through the model gateway.
-*Rationale.* It is the only place where metering, quota, safety and routing can be
-guaranteed consistently.
-*Implication.* Direct endpoint access is not granted, even for prototypes; prototypes get
-a development quota through the same gateway.
-
-## Identity-first authorisation
-
-*Rule.* Every action is authorised against the acting identity and, where applicable, the
-delegated user identity.
-*Rationale.* Network position is not a permission, and agents act autonomously.
-*Implication.* Data access uses permission trimming at query time rather than filtering
-after retrieval.
-
-## Separate control plane from data plane
-
-*Rule.* Policy, registry, lifecycle and observability are separate from agent execution.
-*Rationale.* Control functions must survive changes in runtime technology, and must not
-be bypassable by a runtime.
-*Implication.* A new runtime can be onboarded by integrating with the control plane, not
-by rebuilding governance.
-
-## Contract-based composition
-
-*Rule.* Agents consume tools, data and other agents through published contracts —
-MCP for tools, data product interfaces for knowledge, documented APIs for services.
-*Rationale.* Contracts make components replaceable and reusable across domains.
-*Implication.* Point-to-point integrations that bypass the contract are technical debt
-recorded as such.
-
-## Stateless runtimes, externalised state
-
-*Rule.* Agent runtimes hold no durable state; memory, conversation history and workflow
-state live in managed stores.
-*Rationale.* Enables scaling, failover and clean retention control.
-*Implication.* Memory retention and deletion are enforced in one place rather than in
-each runtime.
-
-## Telemetry is not optional
-
-*Rule.* A component that cannot emit correlated telemetry is not production-eligible.
-*Rationale.* Without correlation there is no diagnosis, no cost attribution and no
-quality measurement.
-*Implication.* Trace context propagation is part of the runtime template.
-
-## Policy as code
-
-*Rule.* Guardrails are expressed as executable policy, not as documentation.
-*Rationale.* Manual controls degrade under delivery pressure.
-*Implication.* Every new control ships with its enforcement mechanism and its evidence
-output.
-
-## Progressive isolation
-
-*Rule.* Isolation is applied proportionally to data sensitivity and blast radius, not
-uniformly.
-*Rationale.* Uniform maximum isolation makes onboarding slow enough that teams avoid the
-platform.
-*Implication.* A published tiering model defines which scenarios require dedicated
-runtimes, networks or model deployments.
+| Principle | Rule | Testable implication |
+| --- | --- | --- |
+| Centralize systemic controls and federate solution delivery | Identity policy, model mediation, registry, network baselines, security signals and minimum telemetry are central; business logic, prompts, tools, experience and scenario evaluation remain with the Agent Project | A project can release business behavior independently but cannot weaken enterprise controls |
+| Treat every agent as a workload identity | Human identity, agent identity and runtime identity are related but not interchangeable | Authorization and traces identify the initiating actor, registered agent and deployed workload |
+| Separate model, agent and tool gateways logically | Each traffic domain has different policies, owners, scaling characteristics and audit requirements | Shared APIM infrastructure still uses separable products, hostnames, policy fragments and telemetry dimensions |
+| Keep business process state out of prompts | Durable progression, approvals, retries and compensating actions belong in workflow and state services | A process can recover correctly without reconstructing state from conversation history |
+| Use private connectivity by default | Public ingress is deliberate, authenticated and protected; platform traffic stays on private enterprise paths where supported | No model, data, tool or runtime backend is reachable directly from the Internet without an approved exception |
+| Deny static keys where managed identity is supported | Workloads use managed identity or workload identity federation; remaining credentials are stored and rotated in Key Vault | No credential is embedded in code, prompts, agent instructions or deployment configuration |
+| Make write actions explicit | Read and transaction tools use different scopes, policies and approval requirements | High-impact writes use deterministic validation, idempotency and human confirmation where required |
+| Evaluate the system, not only the model | Acceptance covers retrieval, tool selection, authorization, workflow outcome, latency, cost and safety | A model-only benchmark cannot satisfy the release gate for a production agent |
+| Design regional workloads for failure | Every regional project and dependency declares failover, degradation and recovery behavior | Recovery testing includes identity, DNS, gateways, state and data dependencies, not only compute |
+| Automate registration and evidence | Deployment pipelines update inventory and attach evaluation, security and operational evidence to the released version | The deployed image, configuration, identities, dependencies and evidence resolve from one release record |
 
 ## Review checklist
 
 | Question | Principle |
 | --- | --- |
-| Can this design reach a model without the gateway? | Single entry point |
-| Whose identity performs each action? | Identity-first |
-| Does governance depend on this runtime existing? | Control/data plane separation |
-| Could another domain reuse this component as-is? | Contract-based composition |
-| Where does memory live and when is it deleted? | Externalised state |
-| Can one trace show the whole interaction? | Telemetry |
-| Is any control enforced only by a human check? | Policy as code |
-| Is the isolation level justified by the data tier? | Progressive isolation |
+| Which behavior is central policy and which is project-owned? | Central controls, federated delivery |
+| Which user, agent and workload identities perform each action? | Agent workload identity |
+| Are experience, model, tool and data policies independently operable? | Gateway separation |
+| Where does workflow state live and how does it recover? | State outside prompts |
+| Which endpoints are public, and why? | Private connectivity |
+| Can every remaining credential be justified and rotated? | Credentialless access |
+| Can a proposed write be validated, approved, deduplicated and audited? | Explicit writes |
+| Does evaluation cover the complete task and its dependencies? | System evaluation |
+| What fails over, degrades or stops during a regional outage? | Regional failure design |
+| Does the release pipeline update inventory and evidence automatically? | Automated registration |

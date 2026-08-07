@@ -7,21 +7,21 @@ nav_order: 3
 
 # Operating model decision
 
-Choosing between the [centralised]({{ site.baseurl }}/03a-Centralized-Operating-Model/)
-and [federated]({{ site.baseurl }}/03b-Federated-Operating-Model/) model is the most
-consequential architecture choice in the concept — and the one most often made
-implicitly. This page makes it explicit.
+The [centralised]({{ site.baseurl }}/03a-Centralized-Operating-Model/) and
+[federated]({{ site.baseurl }}/03b-Federated-Operating-Model/) models are both viable
+outcomes built on the same architecture. The decision determines who builds and operates
+agents; it does not change the 24 capabilities the platform must provide.
 
 ## When to decide
 
-The decision is normally taken at the **end of Phase 1** and revisited during **Phase 3**.
-Deciding earlier means deciding on assumptions; deciding later means the platform has
-already drifted into whichever model its automation happened to support.
+Make the formal decision at the **end of Phase 2**. Phase 1 establishes the foundations;
+Phase 2 tests them through production scenarios and supplies evidence about demand, risk,
+central capacity, domain capability, cost and control maturity. Deciding earlier relies on
+assumptions, while delaying the choice into Phase 3 leaves scaling ownership unclear.
 
-Many enterprises deliberately start centralised to reach a compliant production scenario
-quickly, then federate as guardrail automation and domain capability mature. Designing
-for that transition — see the [hub and spoke concept]({{ site.baseurl }}/03-Architecture-Concept/Hub-and-Spoke-Concept.html)
-— keeps the move an ownership change rather than a re-architecture.
+The selected model can be reviewed at later phase boundaries as conditions change, but
+neither option is provisional. The [hub and spoke concept]({{ site.baseurl }}/03-Architecture-Concept/Hub-and-Spoke-Concept.html)
+keeps a later ownership change from becoming a re-architecture.
 
 ## Decision criteria
 
@@ -36,12 +36,25 @@ for that transition — see the [hub and spoke concept]({{ site.baseurl }}/03-Ar
 | Scenario diversity | Homogeneous | Heterogeneous |
 | Speed expectation | Consistency valued over speed | Domain speed is the priority |
 
-Score each criterion honestly. A single strong signal — for example guardrails that still
-depend on human review — should override a general preference for federation.
+Score each criterion honestly. A single strong constraint — for example insufficient
+central delivery capacity or guardrails that still depend on human review — can outweigh
+the overall balance.
 
-## Readiness gate for federation
+## Readiness gates
 
-Do not federate until all of the following are true:
+### Centralised model
+
+Choose the centralised model only when all of the following are true:
+
+1. The central team has sustained funding and enough engineering capacity for forecast demand.
+2. Intake, prioritisation and service-level expectations are explicit and measurable.
+3. Domain experts can participate without transferring operational ownership.
+4. Central ownership meets the required delivery speed and risk profile.
+5. Cost and usage can still be attributed to consuming scenarios and domains.
+
+### Federated model
+
+Choose the federated model only when all of the following are true:
 
 1. Governance and Security capabilities (7-10) are at maturity level 4.
 2. Observability (22) provides correlated traces across all domains centrally.
@@ -57,8 +70,8 @@ Do not federate until all of the following are true:
 ## Recording the decision
 
 Record the decision as an architecture decision record containing the date, the criteria
-scores, the chosen model, the capabilities whose ownership changes, the compensating
-controls introduced, and the review date. The ownership column of the
+scores, the selected model or explicit hybrid boundary, the accountable owners, any
+compensating controls, and the review date. The ownership column of the
 [capability to architecture mapping]({{ site.baseurl }}/03-Architecture-Concept/Capability-to-Architecture-Mapping.html)
 is updated at the same time — that table is the operational expression of the decision.
 

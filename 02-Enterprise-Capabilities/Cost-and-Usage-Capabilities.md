@@ -2,7 +2,7 @@
 layout: default
 title: Cost and Usage Capabilities
 parent: Enterprise Capabilities
-nav_order: 8
+nav_order: 9
 ---
 
 # Cost and usage capabilities

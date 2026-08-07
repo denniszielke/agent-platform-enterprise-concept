@@ -20,10 +20,9 @@ nav_order: 1
 The Agent Platform should establish an open, scalable ecosystem in which business and
 technology teams can compose agents, models, tools, data products and enterprise
 services across multiple runtimes and delivery channels. Rather than prescribing a
-single technology path, the platform provides shared standards, reusable capabilities
-and governed interoperability so that teams can select the right components for each
-business scenario while remaining aligned with enterprise-wide security, identity, data
-and operational requirements.
+single technology path, it provides shared standards, reusable capabilities and governed
+interoperability so teams can choose the right components while remaining aligned with
+enterprise security, identity, data and operational requirements.
 
 ![Journey from vision to roadmap]({{ site.baseurl }}/assets/diagrams/journey.svg)
 *Vision → capabilities → architecture choices → implementation roadmap.*

@@ -24,6 +24,7 @@ allows centralised and federated implementations to be compared on equal terms.
 | [Security Capabilities](Security-Capabilities.md) | How is the platform protected at runtime? |
 | [Identity Capabilities](Identity-Capabilities.md) | How are humans, agents and tools identified and authorised? |
 | [Data Capabilities](Data-Capabilities.md) | How is grounded, governed knowledge delivered? |
+| [Interoperability Capabilities](Interoperability-Capabilities.md) | How are tools, agents and reusable capabilities connected, registered and consumed? |
 | [Operations Capabilities](Operations-Capabilities.md) | How is the platform run and improved? |
 | [Cost and Usage Capabilities](Cost-and-Usage-Capabilities.md) | How is consumption measured, allocated and controlled? |
 | [Capability Maturity Model](Capability-Maturity-Model.md) | How mature is each capability, and what is good enough? |
