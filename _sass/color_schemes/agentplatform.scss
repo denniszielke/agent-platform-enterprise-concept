@@ -1,0 +1,45 @@
+// Custom colour scheme for the Enterprise Agent Platform site.
+$link-color: #0b5cad;
+$btn-primary-color: #0b5cad;
+$nav-child-link-color: #44546a;
+$body-heading-color: #10243e;
+$sidebar-color: #f4f7fb;
+$border-color: #dde3ec;
+$code-background-color: #f4f7fb;
+
+.hero {
+  background: linear-gradient(135deg, #0b5cad 0%, #4a2f8f 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  h1,
+  h2,
+  p {
+    color: #fff;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  border: 1px solid $border-color;
+  border-left: 4px solid $link-color;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
